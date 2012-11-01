@@ -44,5 +44,7 @@ sed -ie "s/###YEAR###/$year/g" $project_name/pom.xml
 sed -ie "s/###GROUP_ID###/$group_id/g" $project_name/pom.xml
 sed -ie "s/###PROJECT_NAME###/$project_name/g" $project_name/pom.xml
 
+rm -rf $project_name/pom.xmle
+rm -rf $dest_path/App.scalae
 
 echo "Done! run mvn scala:run to run your project"
