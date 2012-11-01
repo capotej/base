@@ -165,6 +165,13 @@
             <arg>-deprecation</arg>
             <arg>-explaintypes</arg>
           </args>
+          <launchers>
+            <launcher>
+              <id>main</id>
+              <mainClass>###PACKAGE_NAME###.App</mainClass>
+            </launcher>
+            <!-- you could define other launcher -->
+          </launchers>
         </configuration>
         <executions>
           <execution>

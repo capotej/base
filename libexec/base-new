@@ -9,7 +9,7 @@ package_folders=$(echo $1 | sed -e 's/\./\//g')
 
 project_name=$(basename $package_folders)
 
-dest_path=$project_name/src/$package_folders
+dest_path=$project_name/src/main/scala/$package_folders
 
 group_id=$(ruby -e "print '$package_name'.split('.')[0...-1].join('.')")
 
@@ -24,21 +24,25 @@ fi
 echo "creating project: $project_name"
 mkdir -p $dest_path
 
-echo "creating App.scala"
+echo "  creating App.scala"
 cp $_BASE_ROOT/share/App.scala $dest_path/
-echo "creating pom.xml"
+echo "  creating pom.xml"
 cp $_BASE_ROOT/share/pom.xml $project_name/
-echo "creating .gitignore"
+echo "  creating .gitignore"
 cp $_BASE_ROOT/share/.gitignore $project_name/
-echo "creating .travis.yml"
+echo "  creating .travis.yml"
 cp $_BASE_ROOT/share/.travis.yml $project_name/
-echo "creating LICENSE"
+echo "  creating LICENSE"
 cp $_BASE_ROOT/share/LICENSE $project_name/
-echo "creating README.markdown"
+echo "  creating README.markdown"
 cp $_BASE_ROOT/share/README.markdown $project_name/
 
 sed -ie "s/###PACKAGE_NAME###/$package_name/g" $dest_path/App.scala
+
+sed -ie "s/###PACKAGE_NAME###/$package_name/g" $project_name/pom.xml
 sed -ie "s/###YEAR###/$year/g" $project_name/pom.xml
 sed -ie "s/###GROUP_ID###/$group_id/g" $project_name/pom.xml
 sed -ie "s/###PROJECT_NAME###/$project_name/g" $project_name/pom.xml
 
+
+echo "Done! run mvn scala:run to run your project"

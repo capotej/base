@@ -1,7 +1,7 @@
 package ###PACKAGE_NAME###
 
 object App {
-  def main = {
+  def main(args: Array[String]) = {
     println("hello world")
   }
 }
