@@ -1,6 +1,7 @@
 #!/bin/sh
-# Usage: base new com.twitter.my_new_app
-# Summary: creates a base project in my_new_app/
+# Usage: base new [package-name]
+# Summary: creates a base project in [package-name]
+# Help: base new com.twitter.my_awesome_project
 set -e
 
 package_name=$1
