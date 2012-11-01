@@ -4,7 +4,9 @@ A scala project generator
 
 ### Installation
 
-```git clone git@github.com:capotej/base.git .base_sub```
+Clone the project:
+
+    git clone git@github.com:capotej/base.git .base_sub
 
 For bash users:
 
@@ -21,7 +23,7 @@ For zsh users:
 
 Once installed, usage is very simple:
 
-```base new com.twitter.pterodactyl```
+    base new com.twitter.pterodactyl
 
 This will create a project ```pterodacytl/``` in the current directory
 
