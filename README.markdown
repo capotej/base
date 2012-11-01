@@ -6,7 +6,7 @@ A scala project generator
 
 Clone the project:
 
-    git clone git@github.com:capotej/base.git .base_sub
+    git clone git@github.com:capotej/base.git ~/.base_sub
 
 For bash users:
 
