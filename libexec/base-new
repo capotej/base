@@ -13,7 +13,7 @@ project_name=$(basename $package_folders)
 dest_path=$project_name/src/main/scala/$package_folders
 test_path=$project_name/src/test/scala/$package_folders
 
-group_id=$(ruby -e "print '$package_name'.split('.')[0...-1].join('.')")
+group_id=$(echo $package_name | sed -e "s/\.[a-zA-Z0-9_-]*$//g")
 
 year=$(date +%Y)
 
