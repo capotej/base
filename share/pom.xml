@@ -102,6 +102,14 @@
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.version}</artifactId>
       <version>1.7.2</version>
+      <scope>test<scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.scalamock</groupId>
+      <artifactId>scalamock-scalatest-support_${scala.version}</artifactId>
+      <version>2.4</version>
+      <scope>test</scope>
     </dependency>
 
   </dependencies>
