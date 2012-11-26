@@ -1,9 +1,9 @@
-logs/*
-target
-target/*
+logs/
+target/
 *.DS_Store
 *.releaseBackup
 release.properties
 *.iml
-.idea
-.idea/*
+*.iws
+*.ipr
+.idea/
