@@ -102,7 +102,7 @@
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.version}</artifactId>
       <version>1.7.2</version>
-      <scope>test<scope>
+      <scope>test</scope>
     </dependency>
 
     <dependency>
